@@ -29,10 +29,12 @@ const seattle = {
   cookiePerHour: [],
   totalSold: 0,
   calcSales: function () {
+    let product = 1;
     for (let i = 0; i < hours.length; i++) {
       const randNum = randomNumber(this.minCust, this.maxCust);
       this.custPerHour.push(randNum);
       this.cookiePerHour.push(Math.ceil(randNum * this.avgSale));
+      this.totalSold += this.cookiePerHour[i];
     }
   },
 };
@@ -77,6 +79,10 @@ for (let i = 0; i < hours.length; i++) {
   li.textContent = `${hours[i]}: ${seattle.cookiePerHour[i]} cookies`;
   ul.appendChild(li);
 }
+
+const liTotal = document.createElement("li");
+  liTotal.textContent = `Total: ${seattle.totalSold} cookies`;
+  ul.appendChild(liTotal);
 
 h2.appendChild(ul);
 seattleData.appendChild(article);
