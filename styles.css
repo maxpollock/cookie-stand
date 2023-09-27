@@ -21,10 +21,10 @@ td {
   border: 1px solid black;
 }
 
-th:nth-child(n + 2) {
+th:nth-child(n+2) {
   background-color: rgb(255, 198, 191);
 }
 
-tr td:nth-child(1) {
+td:first-child{
   background-color: rgb(255, 198, 191);
 }

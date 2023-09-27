@@ -23,9 +23,9 @@ const hours = [
 function headerRow() {
   const table = document.getElementById("table");
   const headerRow = document.createElement("tr");
-  const blankTd = document.createElement("td");
+  const blankTh = document.createElement("th");
   table.appendChild(headerRow);
-  headerRow.appendChild(blankTd);
+  headerRow.appendChild(blankTh);
 
   for (let i = 0; i < hours.length; i++) {
     const th = document.createElement("th");
