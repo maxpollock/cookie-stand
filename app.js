@@ -21,7 +21,11 @@ const hours = [
 ];
 
 function headerRow() {
-  const headerRow = document.getElementById("headerRow");
+  const table = document.getElementById("table");
+  const headerRow = document.createElement("tr");
+  const blankTd = document.createElement("td");
+  table.appendChild(headerRow);
+  headerRow.appendChild(blankTd);
 
   for (let i = 0; i < hours.length; i++) {
     const th = document.createElement("th");
