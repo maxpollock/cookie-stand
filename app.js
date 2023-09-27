@@ -74,11 +74,9 @@ City.prototype.calcSales = function () {
 headerRow();
 
 City.prototype.cityRow = function () {
-  for (x = 0; x < cities.length; x++) {
-    cities[x].calcSales();
-  }
-  const tr = document.createElement("tr");
+  cities[i].calcSales();
 
+  const tr = document.createElement("tr");
   const locationName = document.createElement("td");
   locationName.textContent = `${this.location}`;
   tr.appendChild(locationName);
@@ -103,7 +101,9 @@ for (i = 0; i < cities.length; i++) {
 function footerRow() {
   const footer = document.getElementById(table);
   const footerTr = document.createElement("tr");
-  footerTr.textContent = "Totals";
+  const footerTitleTr = document.createElement("td");
+  footerTitleTr.textContent = "Totals";
+  footerTr.appendChild(footerTitleTr);
   table.appendChild(footerTr);
 
   for (j = 0; j < hours.length; j++) {

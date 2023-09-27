@@ -1,0 +1,30 @@
+header {
+  margin: 2rem auto;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+table {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table,
+th,
+td {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+th:nth-child(n + 2) {
+  background-color: rgb(255, 198, 191);
+}
+
+tr td:nth-child(1) {
+  background-color: rgb(255, 198, 191);
+}
