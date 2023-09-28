@@ -26,16 +26,37 @@
         <legend>Create a new store</legend>
         <form id="form">
           <label for="city">City:</label>
-          <input type="text" name="city" id="city" />
+          <input type="text" name="city" id="city" required />
 
           <label for="min">Minimum Customer per Hour:</label>
-          <input type="number" name="min" id="min" step="any" />
+          <input
+            type="number"
+            name="min"
+            id="min"
+            step="any"
+            required
+            min="0"
+          />
 
           <label for="max">Maximum Customer per Hour:</label>
-          <input type="number" name="max" id="max" step="any" />
+          <input
+            type="number"
+            name="max"
+            id="max"
+            step="any"
+            required
+            min="0"
+          />
 
           <label for="avg">Average Sale per Customer:</label>
-          <input type="number" name="avg" id="avg" step="any" />
+          <input
+            type="number"
+            name="avg"
+            id="avg"
+            step="any"
+            required
+            min="0"
+          />
 
           <button>Submit</button>
         </form>

@@ -134,6 +134,6 @@ form.addEventListener("submit", function (event) {
 
   // Removing previous totals row
   const trInTable = document.querySelectorAll("tr");
-  const totalRow = trInTable;
+  const totalRow = trInTable[6];
   totalRow.remove();
 });
