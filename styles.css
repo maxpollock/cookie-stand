@@ -189,15 +189,15 @@ input {
 
 button {
   border: 1px solid black;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   background-color: rgb(252, 221, 216);
   font-size: 1.4rem;
   font-family: "Martian Mono", monospace;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: white;
 }
 
@@ -233,4 +233,24 @@ footer {
 .footer-items a:hover {
   text-decoration: underline;
   transform: scale(1.1);
+}
+
+#home-link {
+  font-size: 1.5rem;
+  font-family: "Martian Mono", monospace;
+  padding: 1rem;
+  width: 400px;
+  margin: 0.5rem auto;
+}
+
+#home-link a {
+  text-decoration: underline;
+  font-size: 1.6rem;
+  color: black;
+  transition: 0.5s;
+}
+
+#home-link a:hover {
+  cursor: pointer;
+  color: rgb(252, 128, 106);
 }

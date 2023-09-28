@@ -94,11 +94,13 @@ for (i = 0; i < cities.length; i++) {
 
 function footerRow() {
   const footer = document.getElementById(table);
+  const footerTf = document.createElement("tfoot");
   const footerTr = document.createElement("tr");
   const footerTitleTr = document.createElement("td");
   footerTitleTr.textContent = "Totals";
   footerTr.appendChild(footerTitleTr);
-  table.appendChild(footerTr);
+  footerTf.appendChild(footerTr);
+  table.appendChild(footerTf);
 
   for (j = 0; j < hours.length; j++) {
     let product = 0;
@@ -126,7 +128,12 @@ form.addEventListener("submit", function (event) {
   const addCity = new City(city, min, max, avg);
   cities.push(addCity);
 
-  console.log(cities);
-
+  // Calling Functions
   addCity.cityRow();
+  footerRow();
+
+  // Removing previous totals row
+  const trInTable = document.querySelectorAll("tr");
+  const totalRow = trInTable;
+  totalRow.remove();
 });
