@@ -38,32 +38,22 @@ function headerRow() {
   headerRow.appendChild(th);
 }
 
-function City(
-  location,
-  minCust,
-  maxCust,
-  avgSale,
-  custPerHour,
-  cookiePerHour,
-  totalSold,
-  id
-) {
+function City(location, minCust, maxCust, avgSale) {
   this.location = location;
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgSale = avgSale;
-  this.custPerHour = custPerHour;
-  this.cookiePerHour = cookiePerHour;
-  this.totalSold = totalSold;
-  this.id = id;
+  this.custPerHour = [];
+  this.cookiePerHour = [];
+  this.totalSold = 0;
 }
 
 const cities = [
-  new City("Seattle", 23, 65, 6.3, [], [], 0, "seattleData"),
-  new City("Tokoyo", 3, 24, 1.2, [], [], 0, "tokoyoData"),
-  new City("Dubai", 11, 38, 3.7, [], [], 0, "dubaiData"),
-  new City("Paris", 20, 38, 2.3, [], [], 0, "parisData"),
-  new City("Lima", 2, 16, 4.6, [], [], 0, "limaData"),
+  new City("Seattle", 23, 65, 6.3, [], [], 0),
+  new City("Tokoyo", 3, 24, 1.2, [], [], 0),
+  new City("Dubai", 11, 38, 3.7, [], [], 0),
+  new City("Paris", 20, 38, 2.3, [], [], 0),
+  new City("Lima", 2, 16, 4.6, [], [], 0),
 ];
 
 City.prototype.calcSales = function () {
@@ -121,3 +111,22 @@ function footerRow() {
   }
 }
 footerRow();
+
+// FORM SECTION
+
+const form = document.querySelector("form");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const city = event.target.city.value;
+  const min = parseInt(event.target.min.value);
+  const max = parseInt(event.target.max.value);
+  const avg = parseInt(event.target.avg.value);
+
+  const addCity = new City(city, min, max, avg);
+  cities.push(addCity);
+
+  console.log(cities);
+
+  addCity.cityRow();
+});

@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sales Data</title>
-    <script src="./app.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,6 +18,26 @@
   <body>
     <main>
       <table id="table"></table>
+
+      <fieldset>
+        <legend>Create a new store</legend>
+        <form id="form">
+          <label for="city">City:</label>
+          <input type="text" name="city" id="city" />
+
+          <label for="min">Minimum Customer per Hour:</label>
+          <input type="number" name="min" id="min" step="any" />
+
+          <label for="max">Maximum Customer per Hour:</label>
+          <input type="number" name="max" id="max" step="any" />
+
+          <label for="avg">Average Sale per Customer:</label>
+          <input type="number" name="avg" id="avg" step="any" />
+
+          <button>Submit</button>
+        </form>
+      </fieldset>
     </main>
   </body>
+  <script src="./app.js" defer></script>
 </html>

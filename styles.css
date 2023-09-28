@@ -9,11 +9,13 @@ body {
 /* Table Styling */
 table {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding: 1.5rem;
-  width: 80%;
+  min-width: 1200px;
+  max-width: 80%;
   border-collapse: collapse;
   margin: 0 auto;
+  font-family: "Martian Mono", monospace;
 }
 
 table,
@@ -44,6 +46,7 @@ header {
   align-items: center;
   background-color: rgb(252, 161, 145);
   border-bottom: 2px solid black;
+  font-family: "Martian Mono", monospace;
 }
 
 #logoTitle {
@@ -149,6 +152,57 @@ article p {
 section h2 {
   font-size: 1.8rem;
   font-family: "Martian Mono", monospace;
+}
+/* Form */
+fieldset {
+  margin: 5rem auto;
+  max-width: 700px;
+  min-width: 500px;
+  border: 2px solid black;
+}
+
+legend {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.6rem;
+}
+form {
+  margin: 1rem auto;
+  padding: 1rem;
+  width: 80%;
+  height: 90%;
+  font-family: "Martian Mono", monospace;
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+input {
+  width: 60%;
+  padding: 6px 10px;
+  margin: 0.5rem 0 1.5rem 0;
+  display: block;
+  border: 2px solid black;
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+}
+
+button {
+  border: 1px solid black;
+  padding: .5rem 1.5rem;
+  background-color: rgb(252, 221, 216);
+  font-size: 1.4rem;
+  font-family: "Martian Mono", monospace;
+  transition: .5s;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: white;
+}
+
+input:focus {
+  background-color: rgb(252, 221, 216);
 }
 
 /* Footer */
