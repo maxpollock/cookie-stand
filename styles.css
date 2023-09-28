@@ -3,6 +3,7 @@ body {
   background-color: #f5f5f5;
   box-sizing: border-box;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 /* Table Styling */
@@ -34,7 +35,7 @@ td:first-child {
 /* Navigation */
 
 header {
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   position: relative;
   top: -2rem;
   width: 100%;
@@ -42,6 +43,7 @@ header {
   justify-content: space-evenly;
   align-items: center;
   background-color: rgb(252, 161, 145);
+  border-bottom: 2px solid black;
 }
 
 #logoTitle {
@@ -49,6 +51,10 @@ header {
   align-items: center;
   font-family: "Martian Mono", monospace;
   font-size: 1.2rem;
+}
+
+#logoTitle img {
+  width: 180px;
 }
 
 nav {
@@ -63,13 +69,50 @@ nav a {
   cursor: pointer;
   font-family: "Martian Mono", monospace;
   font-size: 1.1rem;
-  transition: 1s;
+  transition: 0.8s;
 }
 
 nav a:hover {
   text-decoration: underline;
   transform: scale(1.1);
 }
+
+/* About Section */
+#about-title {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.8rem;
+}
+
+.about-section {
+  width: 1300px;
+  margin: 5rem auto;
+}
+
+.about-img {
+  width: 180px;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.diagram {
+  margin: 1rem auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 8px;
+  padding-bottom: 0.5rem;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.diagram h4 {
+  font-size: 2rem;
+}
+
 /* Locations Section */
 .locations {
   display: flex;
@@ -89,6 +132,12 @@ section {
   padding-bottom: 0.5rem;
   background-color: white;
 }
+
+.section-title {
+  text-align: center;
+  font-family: "Martian Mono", monospace;
+  font-size: 1.8rem;
+}
 article h3 {
   margin-top: 1.5rem;
 }
@@ -100,4 +149,34 @@ article p {
 section h2 {
   font-size: 1.8rem;
   font-family: "Martian Mono", monospace;
+}
+
+/* Footer */
+
+footer {
+  height: 150px;
+  width: 100%;
+  margin: 5rem auto 0rem auto;
+  background-color: rgb(252, 161, 145);
+}
+
+.footer-items {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer-items a {
+  color: black;
+  text-decoration: none;
+  font-family: "Martian Mono", monospace;
+  font-size: 1.2rem;
+}
+
+.footer-items a:hover {
+  text-decoration: underline;
+  transform: scale(1.1);
 }
