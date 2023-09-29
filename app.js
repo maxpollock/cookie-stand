@@ -93,14 +93,19 @@ for (i = 0; i < cities.length; i++) {
 }
 
 function footerRow() {
-  const footer = document.getElementById(table);
+  const footer = document.getElementById("table");
   const footerTf = document.createElement("tfoot");
+
   const footerTr = document.createElement("tr");
-  const footerTitleTr = document.createElement("td");
-  footerTitleTr.textContent = "Totals";
-  footerTr.appendChild(footerTitleTr);
+  footerTr.setAttribute("id", "totalrow");
+  const oldTr = document.getElementById("totalrow");
+  oldTr?.remove();
+
+  const footerTd = document.createElement("td");
+  footerTd.textContent = "Totals";
+  footerTr.appendChild(footerTd);
   footerTf.appendChild(footerTr);
-  table.appendChild(footerTf);
+  footer.appendChild(footerTf);
 
   for (j = 0; j < hours.length; j++) {
     let product = 0;
@@ -131,9 +136,4 @@ form.addEventListener("submit", function (event) {
   // Calling Functions
   addCity.cityRow();
   footerRow();
-
-  // Removing previous totals row
-  const trInTable = document.querySelectorAll("tr");
-  const totalRow = trInTable[6];
-  totalRow.remove();
 });
